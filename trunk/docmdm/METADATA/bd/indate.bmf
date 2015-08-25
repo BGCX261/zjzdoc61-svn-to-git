@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component conRouterType="手动" createIndustry="0" createTime="2012-09-26 16:05:08" creator="" description="" displayName="BD数据有效期" fromSourceBmf="true" gencodestyle="NC传统样式" help="" id="8d2e050c-9183-4860-bf71-22873e8045c2" industry="0" industryChanged="false" industryIncrease="false" industryName="基础行业" isSource="false" isbizmodel="false" mainEntity="08d00693-c7f6-4791-9e52-5b0c06af6285" modifier="" modifyIndustry="0" modifyTime="2012-10-09 15:14:17" name="indate" namespace="docmdm" ownModule="docmdm" preLoad="false" programcode="" resModuleName="indate" resid="" version="5" versionType="0">
+    <celllist>
+        <entity accessorClassName="nc.md.model.access.javamap.POJOStyle" bizItfImpClassName="" componentID="8d2e050c-9183-4860-bf71-22873e8045c2" createIndustry="0" createTime="2012-09-26 16:05:13" creator="" czlist="" description="" displayName="数据有效期" fullClassName="nc.vo.docmdm.bd.Indate" height="100" help="" id="08d00693-c7f6-4791-9e52-5b0c06af6285" industryChanged="false" isAuthen="true" isCreateSQL="true" isExtendBean="false" isPrimary="true" isSource="false" keyAttributeId="01e74e55-587d-4f2b-9ba8-d0760b3421eb" modInfoClassName="" modifier="" modifyIndustry="0" modifyTime="2012-10-09 15:14:52" name="docmdm_bd_indate" resid="" stereoType="" tableName="docmdm_bd_indate" userDefClassName="" versionType="0" visibility="public" width="80" x="215" y="92">
+            <attributelist>
+                <attribute accessStrategy="" accesspower="false" accesspowergroup="" calculation="false" classID="08d00693-c7f6-4791-9e52-5b0c06af6285" createIndustry="0" dataType="BS000010000100001051" dataTypeStyle="SINGLE" dbtype="char" defaultValue="" description="" displayName="档案主键" dynamic="false" dynamicTable="" fieldName="pk_docmdm" fieldType="char" fixedLength="false" forLocale="false" help="" id="01e74e55-587d-4f2b-9ba8-d0760b3421eb" industryChanged="false" isActive="true" isAuthorization="true" isDefaultDimensionAttribute="false" isDefaultMeasureAttribute="false" isFeature="false" isGlobalization="false" isHide="false" isKey="true" isNullable="false" isReadOnly="false" isShare="false" isSource="true" length="20" maxValue="" minValue="" modifyIndustry="0" name="pk_docmdm" notSerialize="false" precise="" refModelName="" resid="" sequence="0" typeDisplayName="UFID" typeName="UFID" versionType="0" visibility="public"/>
+                <attribute accessStrategy="" accesspower="false" accesspowergroup="" calculation="false" classID="08d00693-c7f6-4791-9e52-5b0c06af6285" createIndustry="0" dataType="BS000010000100001033" dataTypeStyle="SINGLE" dbtype="char" defaultValue="" description="" displayName="起始日期" dynamic="false" dynamicTable="" fieldName="dfrom" fieldType="char" fixedLength="false" forLocale="false" help="" id="70b871fb-0c11-4cf0-b89e-d30b5625b03f" industryChanged="false" isActive="true" isAuthorization="true" isDefaultDimensionAttribute="false" isDefaultMeasureAttribute="false" isFeature="false" isGlobalization="false" isHide="false" isKey="false" isNullable="true" isReadOnly="false" isShare="false" isSource="true" length="19" maxValue="" minValue="" modifyIndustry="0" name="dfrom" notSerialize="false" precise="" refModelName="" resid="" sequence="1" typeDisplayName="UFDate" typeName="UFDate" versionType="0" visibility="public"/>
+                <attribute accessStrategy="" accesspower="false" accesspowergroup="" calculation="false" classID="08d00693-c7f6-4791-9e52-5b0c06af6285" createIndustry="0" dataType="BS000010000100001033" dataTypeStyle="SINGLE" dbtype="char" defaultValue="" description="" displayName="截止日期" dynamic="false" dynamicTable="" fieldName="dto" fieldType="char" fixedLength="false" forLocale="false" help="" id="92a1231d-a2b1-4257-b1b9-68b6a6a9d79e" industryChanged="false" isActive="true" isAuthorization="true" isDefaultDimensionAttribute="false" isDefaultMeasureAttribute="false" isFeature="false" isGlobalization="false" isHide="false" isKey="false" isNullable="true" isReadOnly="false" isShare="false" isSource="true" length="19" maxValue="" minValue="" modifyIndustry="0" name="dto" notSerialize="false" precise="" refModelName="" resid="" sequence="2" typeDisplayName="UFDate" typeName="UFDate" versionType="0" visibility="public"/>
+            </attributelist>
+            <operationlist/>
+            <busiitfs/>
+            <busimaps/>
+            <canzhaolist/>
+            <accessor classFullname="nc.md.model.access.javamap.POJOStyle" displayName="POJO" name="pojo">
+                <properties/>
+            </accessor>
+        </entity>
+    </celllist>
+    <connectlist/>
+    <refdepends/>
+    <refdependLoseIDs/>
+    <cellRemoveLog/>
+    <rulers>
+        <ruler isHorizontal="true" unit="0">
+            <guideList/>
+        </ruler>
+        <ruler isHorizontal="false" unit="0">
+            <guideList/>
+        </ruler>
+    </rulers>
+</component>

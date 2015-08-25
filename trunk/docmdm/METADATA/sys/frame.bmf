@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component conRouterType="手动" createIndustry="0" createTime="2012-10-11 12:20:06" creator="" description="" displayName="SYS档案适配器" fromSourceBmf="true" gencodestyle="NC传统样式" help="" id="ae173020-3848-4e72-9391-3ce659dc329d" industry="0" industryChanged="false" industryIncrease="false" industryName="基础行业" isSource="false" isbizmodel="false" mainEntity="20f6603f-69b1-4197-bf28-5c7ae44b6e16" modifier="" modifyIndustry="0" modifyTime="2012-10-18 15:33:59" name="frame" namespace="docmdm" ownModule="docmdm" preLoad="false" programcode="" resModuleName="frame" resid="" version="3" versionType="0">
+    <celllist>
+        <entity accessorClassName="nc.md.model.access.javamap.POJOStyle" bizItfImpClassName="" componentID="ae173020-3848-4e72-9391-3ce659dc329d" createIndustry="0" createTime="2012-10-11 12:20:10" creator="" czlist="" description="" displayName="基本档案" fullClassName="nc.vo.mdm.frame.DocVO" height="100" help="" id="20f6603f-69b1-4197-bf28-5c7ae44b6e16" industryChanged="false" isAuthen="true" isCreateSQL="true" isExtendBean="false" isPrimary="true" isSource="false" keyAttributeId="7ce6d00e-7167-407a-9fcf-94452abfa0d3" modInfoClassName="" modifier="" modifyIndustry="0" modifyTime="2012-10-18 15:34:00" name="DocVO" resid="" stereoType="" tableName="docmdm_docvo" userDefClassName="" versionType="0" visibility="public" width="80" x="317" y="95">
+            <attributelist>
+                <attribute accessStrategy="" accesspower="false" accesspowergroup="" calculation="false" classID="20f6603f-69b1-4197-bf28-5c7ae44b6e16" createIndustry="0" dataType="BS000010000100001051" dataTypeStyle="SINGLE" dbtype="char" defaultValue="" description="" displayName="档案主键" dynamic="false" dynamicTable="" fieldName="pk_docmdm" fieldType="char" fixedLength="false" forLocale="false" help="" id="7ce6d00e-7167-407a-9fcf-94452abfa0d3" industryChanged="false" isActive="true" isAuthorization="true" isDefaultDimensionAttribute="false" isDefaultMeasureAttribute="false" isFeature="false" isGlobalization="false" isHide="false" isKey="true" isNullable="false" isReadOnly="false" isShare="false" isSource="true" length="20" maxValue="" minValue="" modifyIndustry="0" name="pk_docmdm" notSerialize="false" precise="" refModelName="" resid="" sequence="0" typeDisplayName="UFID" typeName="UFID" versionType="0" visibility="public"/>
+                <attribute accessStrategy="" accesspower="false" accesspowergroup="" calculation="false" classID="20f6603f-69b1-4197-bf28-5c7ae44b6e16" createIndustry="0" dataType="BS000010000100001001" dataTypeStyle="SINGLE" dbtype="varchar" defaultValue="" description="" displayName="编码" dynamic="false" dynamicTable="" fieldName="vcode" fieldType="varchar" fixedLength="false" forLocale="false" help="" id="d2bc9a1e-7de7-457d-b72a-cc6b01100d6a" industryChanged="false" isActive="true" isAuthorization="true" isDefaultDimensionAttribute="false" isDefaultMeasureAttribute="false" isFeature="false" isGlobalization="false" isHide="false" isKey="false" isNullable="true" isReadOnly="false" isShare="false" isSource="true" length="50" maxValue="" minValue="" modifyIndustry="0" name="vcode" notSerialize="false" precise="" refModelName="" resid="" sequence="1" typeDisplayName="String" typeName="String" versionType="0" visibility="public"/>
+                <attribute accessStrategy="" accesspower="false" accesspowergroup="" calculation="false" classID="20f6603f-69b1-4197-bf28-5c7ae44b6e16" createIndustry="0" dataType="BS000010000100001001" dataTypeStyle="SINGLE" dbtype="varchar" defaultValue="" description="" displayName="名称" dynamic="false" dynamicTable="" fieldName="vname" fieldType="varchar" fixedLength="false" forLocale="false" help="" id="f8ea3d82-8aec-4ba5-a5a8-11b9d147ba5b" industryChanged="false" isActive="true" isAuthorization="true" isDefaultDimensionAttribute="false" isDefaultMeasureAttribute="false" isFeature="false" isGlobalization="false" isHide="false" isKey="false" isNullable="true" isReadOnly="false" isShare="false" isSource="true" length="50" maxValue="" minValue="" modifyIndustry="0" name="vname" notSerialize="false" precise="" refModelName="" resid="" sequence="2" typeDisplayName="String" typeName="String" versionType="0" visibility="public"/>
+            </attributelist>
+            <operationlist/>
+            <busiitfs/>
+            <busimaps/>
+            <canzhaolist/>
+            <accessor classFullname="nc.md.model.access.javamap.POJOStyle" displayName="POJO" name="pojo">
+                <properties/>
+            </accessor>
+        </entity>
+    </celllist>
+    <connectlist/>
+    <refdepends/>
+    <refdependLoseIDs/>
+    <cellRemoveLog/>
+    <rulers>
+        <ruler isHorizontal="true" unit="0">
+            <guideList/>
+        </ruler>
+        <ruler isHorizontal="false" unit="0">
+            <guideList/>
+        </ruler>
+    </rulers>
+</component>

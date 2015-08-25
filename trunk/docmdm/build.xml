@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="docmdm">
+	<property environment="env" />
+	<property name="ECLIPSE_HOME" value="../../../indigo_docmdm" />
+	
+    <property name="NC_HOME" value="D:/ufsoft/zjzdoc61"/>
+    <property name="Project_Workspace" value="D:/eclipse/workspace/zjzdoc61/docmdm"/>
+	<property name="Project_Name" value="docmdm"/>
+    <property name="DIR_MODULES" value="D:/temp/modules"/>
+	<property name="DIR_PROJECT_MODULE" value="${DIR_MODULES}/${Project_Name}" />
+    <property name="DIR_PROJECT_PUBLIC" value="${DIR_MODULES}/${Project_Name}/lib"/>
+    <property name="DIR_PROJECT_PRIVATE" value="${DIR_MODULES}/${Project_Name}/META-INF/lib"/>
+    <property name="DIR_PROJECT_CLIENT" value="${DIR_MODULES}/${Project_Name}/client/lib"/>
+	
+    <property name="DIR_PROJECT_PUBLIC_CLASSES" value="${DIR_MODULES}/${Project_Name}/classes"/>
+    <property name="DIR_PROJECT_PRIVATE_CLASSES" value="${DIR_MODULES}/${Project_Name}/META-INF/classes"/>
+    <property name="DIR_PROJECT_CLIENT_CLASSES" value="${DIR_MODULES}/${Project_Name}/client/classes"/>
+
+	<property name="workspace_loc:docmdm" value="." />
+	<property name="junit.output.dir" value="junit" />
+	<property name="debuglevel" value="source,lines,vars" />
+	<property name="target" value="1.6" />
+	<property name="source" value="1.6" />
+	<path id="Ant_Library.libraryclasspath">
+		<pathelement location="${NC_HOME}/ant/lib/ant-antlr.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-apache-bcel.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-apache-bsf.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-apache-log4j.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-apache-oro.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-apache-regexp.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-apache-resolver.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-commons-logging.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-commons-net.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-contrib-10b2.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-jai.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-javamail.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-jdepend.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-jmf.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-jsch.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-junit.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-launcher.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-nc.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-netrexx.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-nodeps.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-starteam.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-stylebook.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-swing.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-testutil.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-trax.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant-weblogic.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/ant.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/xercesImpl.jar" />
+		<pathelement location="${NC_HOME}/ant/lib/xml-apis.jar" />
+	</path>
+	<path id="Product_Common_Library.libraryclasspath">
+		<pathelement location="${NC_HOME}/resources/" />
+		<pathelement location="${NC_HOME}/lib/bsh-2.0b1.jar" />
+		<pathelement location="${NC_HOME}/lib/cnytiruces.jar" />
+		<pathelement location="${NC_HOME}/lib/commonj.jar" />
+		<pathelement location="${NC_HOME}/lib/db2java.jar" />
+		<pathelement location="${NC_HOME}/lib/db2jcc.jar" />
+		<pathelement location="${NC_HOME}/lib/db2jcc_license_cu.jar" />
+		<pathelement location="${NC_HOME}/lib/easymock.jar" />
+		<pathelement location="${NC_HOME}/lib/ehcache-1.1.jar" />
+		<pathelement location="${NC_HOME}/lib/fdsapi.jar" />
+		<pathelement location="${NC_HOME}/lib/fwcheck.jar" />
+		<pathelement location="${NC_HOME}/lib/fwserver.jar" />
+		<pathelement location="${NC_HOME}/lib/gbase-connector-java-8.3.82.51_build50.1-bin.jar" />
+		<pathelement location="${NC_HOME}/lib/httpclient.jar" />
+		<pathelement location="${NC_HOME}/lib/httpunit.jar" />
+		<pathelement location="${NC_HOME}/lib/ifxjdbc.jar" />
+		<pathelement location="${NC_HOME}/lib/jcifs-1.2.9.jar" />
+		<pathelement location="${NC_HOME}/lib/jpf-boot.jar" />
+		<pathelement location="${NC_HOME}/lib/jpf-tools.jar" />
+		<pathelement location="${NC_HOME}/lib/jpf.jar" />
+		<pathelement location="${NC_HOME}/lib/jtds-1.2.jar" />
+		<pathelement location="${NC_HOME}/lib/junit.jar" />
+		<pathelement location="${NC_HOME}/lib/mxfw.jar" />
+		<pathelement location="${NC_HOME}/lib/ncsec.jar" />
+		<pathelement location="${NC_HOME}/lib/ojdbc6.jar" />
+		<pathelement location="${NC_HOME}/lib/org.eclipse.swt.win32.win32.x86.source_3.4.1.v3452b.jar" />
+		<pathelement location="${NC_HOME}/lib/org.eclipse.swt.win32.win32.x86_3.4.1.v3452b.jar" />
+		<pathelement location="${NC_HOME}/lib/org.eclipse.swt_3.4.2.v3452b.jar" />
+		<pathelement location="${NC_HOME}/lib/oscache-2.1.jar" />
+		<pathelement location="${NC_HOME}/lib/PDFBox_bin.jar" />
+		<pathelement location="${NC_HOME}/lib/postgresql-9.0-801.jdbc4.jar" />
+		<pathelement location="${NC_HOME}/lib/sqljdbc4.jar" />
+		<pathelement location="${NC_HOME}/lib/wasresource.jar" />
+		<pathelement location="${NC_HOME}/external/classes/" />
+		<pathelement location="${NC_HOME}/external/lib/activemq-all-5.2.0.jar" />
+		<pathelement location="${NC_HOME}/external/lib/activemq-ra-5.2.0.jar" />
+		<pathelement location="${NC_HOME}/external/lib/annotation_1.0_spec-1.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/antlr-2.7.7.jar" />
+		<pathelement location="${NC_HOME}/external/lib/antlr-runtime-3.3.jar" />
+		<pathelement location="${NC_HOME}/external/lib/asm-3.2.jar" />
+		<pathelement location="${NC_HOME}/external/lib/avalon-framework-api-4.3.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/avalon-framework-impl-4.3.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/barcode4j-light.jar" />
+		<pathelement location="${NC_HOME}/external/lib/basic.jar" />
+		<pathelement location="${NC_HOME}/external/lib/bcprov-jdk15-132.jar" />
+		<pathelement location="${NC_HOME}/external/lib/borland_bin.jar" />
+		<pathelement location="${NC_HOME}/external/lib/borland_bin_client.jar" />
+		<pathelement location="${NC_HOME}/external/lib/cglib-nodep-2.2.jar" />
+		<pathelement location="${NC_HOME}/external/lib/ChartDirector.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-beanutils-core.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-cli-1.0.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-codec.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-collections.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-configuration-1.2.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-dbcp-1.2.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-digester.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-fileupload-1.2.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-io-1.2.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-io-1.3.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-lang-2.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-lang-2.4.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-logging-1.1.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-logging.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-math-1.0.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-pool.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-validator.jar" />
+		<pathelement location="${NC_HOME}/external/lib/commons-vfs-patched-1.9.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/dl.jar" />
+		<pathelement location="${NC_HOME}/external/lib/docx4j-2.7.0.jar" />
+		<pathelement location="${NC_HOME}/external/lib/dom4j-2.0.0-ALPHA1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/flexdock-0.5.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/flexgantt-2.0.0.jar" />
+		<pathelement location="${NC_HOME}/external/lib/fop-1.0.jar" />
+		<pathelement location="${NC_HOME}/external/lib/forms-1.0.5.jar" />
+		<pathelement location="${NC_HOME}/external/lib/freemarker.jar" />
+		<pathelement location="${NC_HOME}/external/lib/fwpub.jar" />
+		<pathelement location="${NC_HOME}/external/lib/geronimo-ws-metadata_2.0_spec-1.1.2.jar" />
+		<pathelement location="${NC_HOME}/external/lib/granite.jar" />
+		<pathelement location="${NC_HOME}/external/lib/hsqldb.jar" />
+		<pathelement location="${NC_HOME}/external/lib/HTTPget.jar" />
+		<pathelement location="${NC_HOME}/external/lib/images.jar" />
+		<pathelement location="${NC_HOME}/external/lib/install.jar" />
+		<pathelement location="${NC_HOME}/external/lib/iText-2.1.3.jar" />
+		<pathelement location="${NC_HOME}/external/lib/jaxen-1.1-beta-4.jar" />
+		<pathelement location="${NC_HOME}/external/lib/jaxws-api-2.1-1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/jdk5.jar" />
+		<pathelement location="${NC_HOME}/external/lib/jdom-1.0.jar" />
+		<pathelement location="${NC_HOME}/external/lib/jettison-1.0.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/jfreechart.jar" />
+		<pathelement location="${NC_HOME}/external/lib/jfreechart_resources.jar" />
+		<pathelement location="${NC_HOME}/external/lib/jgraph.jar" />
+		<pathelement location="${NC_HOME}/external/lib/jgraphx.jar" />
+		<pathelement location="${NC_HOME}/external/lib/jhelp.jar" />
+		<pathelement location="${NC_HOME}/external/lib/jsr311-api-0.6.jar" />
+		<pathelement location="${NC_HOME}/external/lib/jxl.jar" />
+		<pathelement location="${NC_HOME}/external/lib/license4j-1.4.jar" />
+		<pathelement location="${NC_HOME}/external/lib/log.jar" />
+		<pathelement location="${NC_HOME}/external/lib/log4j-1.2.15.jar" />
+		<pathelement location="${NC_HOME}/external/lib/looks-2.1.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/mail-1.4.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/miglayout-4.0-swing.jar" />
+		<pathelement location="${NC_HOME}/external/lib/mpxj.jar" />
+		<pathelement location="${NC_HOME}/external/lib/nccache.jar" />
+		<pathelement location="${NC_HOME}/external/lib/ncdlbeans.jar" />
+		<pathelement location="${NC_HOME}/external/lib/ncsqlparser.jar" />
+		<pathelement location="${NC_HOME}/external/lib/neethi-2.0.4.jar" />
+		<pathelement location="${NC_HOME}/external/lib/OfficeLnFs_2.7.jar" />
+		<pathelement location="${NC_HOME}/external/lib/opensaml-1.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/org.eclipse.swt.win32.win32.x86.source_3.4.1.v3452b.jar" />
+		<pathelement location="${NC_HOME}/external/lib/org.eclipse.swt.win32.win32.x86_3.4.1.v3452b.jar" />
+		<pathelement location="${NC_HOME}/external/lib/org.eclipse.swt_3.4.2.v3452b.jar" />
+		<pathelement location="${NC_HOME}/external/lib/poi-3.7-20101029.jar" />
+		<pathelement location="${NC_HOME}/external/lib/poi-ooxml-3.7-20101029.jar" />
+		<pathelement location="${NC_HOME}/external/lib/poi-ooxml-schemas-3.7-20101029.jar" />
+		<pathelement location="${NC_HOME}/external/lib/poi-scratchpad-3.7-20101029.jar" />
+		<pathelement location="${NC_HOME}/external/lib/portlet-api_2.0_spec-1.0.jar" />
+		<pathelement location="${NC_HOME}/external/lib/protobuf.jar" />
+		<pathelement location="${NC_HOME}/external/lib/saaj-api-1.3.jar" />
+		<pathelement location="${NC_HOME}/external/lib/saaj-impl-1.3.jar" />
+		<pathelement location="${NC_HOME}/external/lib/serializer-2.7.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/sfpub.jar" />
+		<pathelement location="${NC_HOME}/external/lib/skinlf.jar" />
+		<pathelement location="${NC_HOME}/external/lib/spring-beans.jar" />
+		<pathelement location="${NC_HOME}/external/lib/spring-context.jar" />
+		<pathelement location="${NC_HOME}/external/lib/spring-core.jar" />
+		<pathelement location="${NC_HOME}/external/lib/spring-web.jar" />
+		<pathelement location="${NC_HOME}/external/lib/spring-webmvc.jar" />
+		<pathelement location="${NC_HOME}/external/lib/stax-api-1.0-2.jar" />
+		<pathelement location="${NC_HOME}/external/lib/stringtemplate-3.2.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/themeroot_blue.jar" />
+		<pathelement location="${NC_HOME}/external/lib/themeroot_red.jar" />
+		<pathelement location="${NC_HOME}/external/lib/TimingFramework-1.0.jar" />
+		<pathelement location="${NC_HOME}/external/lib/uapwstool.jar" />
+		<pathelement location="${NC_HOME}/external/lib/ufmobile.jar" />
+		<pathelement location="${NC_HOME}/external/lib/velocity-dep-1.4.jar" />
+		<pathelement location="${NC_HOME}/external/lib/wmf2svg-0.8.3.jar" />
+		<pathelement location="${NC_HOME}/external/lib/wss4j-1.5.4.jar" />
+		<pathelement location="${NC_HOME}/external/lib/wstx-asl-3.2.4.jar" />
+		<pathelement location="${NC_HOME}/external/lib/xalan-2.7.0.jar" />
+		<pathelement location="${NC_HOME}/external/lib/xalan-2.7.1.jar" />
+		<pathelement location="${NC_HOME}/external/lib/xerces.jar" />
+		<pathelement location="${NC_HOME}/external/lib/xml-apis-1.3.04.jar" />
+		<pathelement location="${NC_HOME}/external/lib/xml-resolver-1.2.jar" />
+		<pathelement location="${NC_HOME}/external/lib/xmlbeans-2.3.0.jar" />
+		<pathelement location="${NC_HOME}/external/lib/xmlgraphics-commons-1.4.jar" />
+		<pathelement location="${NC_HOME}/external/lib/XmlSchema-1.4.2.jar" />
+		<pathelement location="${NC_HOME}/external/lib/xmlsec-1.4.0.jar" />
+		<pathelement location="${NC_HOME}/external/lib/xmlunit-1.2.jar" />
+		<pathelement location="${NC_HOME}/external/lib/xpp3_min-1.1.3.4.O.jar" />
+		<pathelement location="${NC_HOME}/external/lib/XStream_bin.jar" />
+	</path>
+	<path id="Middleware_Library.libraryclasspath">
+		<pathelement location="${NC_HOME}/middleware/ecj-3.7.jar" />
+		<pathelement location="${NC_HOME}/middleware/fwejb.jar" />
+		<pathelement location="${NC_HOME}/middleware/j2ee.jar" />
+		<pathelement location="${NC_HOME}/middleware/jmx.jar" />
+		<pathelement location="${NC_HOME}/middleware/jstl.jar" />
+		<pathelement location="${NC_HOME}/middleware/mw.jar" />
+		<pathelement location="${NC_HOME}/middleware/standard.jar" />
+		<pathelement location="${NC_HOME}/middleware/tomcat-dbcp.jar" />
+		<pathelement location="${NC_HOME}/middleware/tomcat.jar" />
+	</path>
+	<path id="Framework_Library.libraryclasspath">
+		<pathelement location="${NC_HOME}/framework/codegen.jar" />
+		<pathelement location="${NC_HOME}/framework/ejbgenerator.jar" />
+		<pathelement location="${NC_HOME}/framework/sync.jar" />
+	</path>
+	<path id="Module_Public_Library.libraryclasspath">
+		<pathelement location="${NC_HOME}/modules/bap/classes/" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/commons-vfs.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/eigenbase-properties.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/eigenbase-resgen.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/eigenbase-xom.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/jakarta-regexp-1.2.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/olap4j-tck.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/olap4j-xmla.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/olap4j.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/pubbap_bap.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/pubbap_base.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/pubbap_olap.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/pubbap_pivot.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/pubbap_qdi.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/RdiCommon.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/retroweaver-rt.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/lib/retroweaver.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/classes/" />
+		<pathelement location="${NC_HOME}/modules/bapub/lib/dom4j-1.6.1.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/lib/jalopy.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/lib/pubbapub_formula.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/lib/pubbapub_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/lib/pubbapub_report.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/lib/pubbapub_smart.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/lib/restools.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/lib/xmlbeans-2.3.0.jar" />
+		<pathelement location="${NC_HOME}/modules/fip/classes/" />
+		<pathelement location="${NC_HOME}/modules/fip/lib/pubfip_fip.jar" />
+		<pathelement location="${NC_HOME}/modules/mabase/classes/" />
+		<pathelement location="${NC_HOME}/modules/mabase/lib/pubmabase_mabase.jar" />
+		<pathelement location="${NC_HOME}/modules/ncaam/classes/" />
+		<pathelement location="${NC_HOME}/modules/ncaam/lib/pubncaam.jar" />
+		<pathelement location="${NC_HOME}/modules/pubapp/classes/" />
+		<pathelement location="${NC_HOME}/modules/pubapp/lib/pubpubapp_pubapp.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/classes/" />
+		<pathelement location="${NC_HOME}/modules/tbb/lib/pubtbb_bean.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/lib/pubtbb_cons.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/lib/pubtbb_ctrl.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/lib/pubtbb_cube.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/lib/pubtbb_dim.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/lib/pubtbb_dimdoc.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/lib/pubtbb_form.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/lib/pubtbb_limit.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/lib/pubtbb_oba.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/lib/pubtbb_plan.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/lib/pubtbb_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/lib/pubtbb_rule.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/lib/pubtbb_task.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/classes/" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuap_hradminorg.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuap_wordgenerator.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuap_wordtemplate.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapbaseservice.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapbbd.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapbusibean.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapdatadict.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapdbcache.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapeaa.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapexcelimport.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapformula.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapjdbcframework.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuaplightscheduler.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapmddb.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapmessage.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapmultilanguage.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapncbean.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapncjca.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapncmd.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapnctools.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuaporg.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuaporgref.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapoutputTemplate.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapplatform.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapplatformapp.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapprealert.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuappubapputil.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuaprbac.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuaprbacapp.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapreport.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapscheduleengine.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapsecurity.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapsecurityII.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapses.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapsfapp.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapsfbase.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapsystemframework.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuaptemplate.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapuifactory.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapUIFactoryII.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/lib/pubuapUIFactoryIIBasic.jar" />
+		<pathelement location="${NC_HOME}/modules/uapadp/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapadp/lib/pubuapadp.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_account.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_address.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_assign.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_assistant.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_balatype.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_bankacc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_batchupdate.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_bdbase.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_bom.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_brand.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_cashflow.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_channeltype.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_cmbasedoc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_ctbasedoc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_currinfo.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_customer.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_customersupplier.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_datatransfer.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_fibd.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_hrformula.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_hrtaholiday.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_hrtashift.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_hrtimealgorithm.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_hrutils.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_inoutbusiclass.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_material.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_measdoc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_mmbdpub.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_notetype.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_payterm.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_pmbase.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_prodline.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_psg.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_pst.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_qcbasedoc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_rack.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_scmbdpub.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_stordoc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_supplier.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_taxitemstaxrate.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_team.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_transporttype.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_vouchertype.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_workcalendar.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/lib/pubuapbd_workcenter.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbdsearch/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapbdsearch/lib/pubuapbdsearch.jar" />
+		<pathelement location="${NC_HOME}/modules/uapde/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapde/lib/pubuapde_codegen.jar" />
+		<pathelement location="${NC_HOME}/modules/uapde/lib/pubuapde_codegenuif2.jar" />
+		<pathelement location="${NC_HOME}/modules/uapde/lib/pubuapde_modeldesigner.jar" />
+		<pathelement location="${NC_HOME}/modules/uapde/lib/pubuapde_modeldesignercore.jar" />
+		<pathelement location="${NC_HOME}/modules/uapeai/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapeai/lib/pubuapeai.jar" />
+		<pathelement location="${NC_HOME}/modules/uapws/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapws/lib/pubuapws.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/classes/" />
+		<pathelement location="${NC_HOME}/modules/ufofr/lib/pinyin4j-2.5.0.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/lib/pubufofr_bi.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/lib/pubufofr_browser.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/lib/pubufofr_designer.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/lib/pubufofr_portal.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/lib/restools.jar" />
+		<pathelement location="${NC_HOME}/modules/webad/classes/" />
+		<pathelement location="${NC_HOME}/modules/webad/lib/pubwebad_ad.jar" />
+		<pathelement location="${NC_HOME}/modules/webad/lib/pubwebad_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/webad/lib/webadadportalspec.jar" />
+		<pathelement location="${NC_HOME}/modules/webad/lib/webadpubportalspec.jar" />
+		<pathelement location="${NC_HOME}/modules/webbd/classes/" />
+		<pathelement location="${NC_HOME}/modules/webbd/lib/pubwebbd_bd.jar" />
+		<pathelement location="${NC_HOME}/modules/webbd/lib/pubwebbd_comp.jar" />
+		<pathelement location="${NC_HOME}/modules/webbd/lib/pubwebbd_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/webbd/lib/webbdbdportalspec.jar" />
+		<pathelement location="${NC_HOME}/modules/webbd/lib/webbdcompportalspec.jar" />
+		<pathelement location="${NC_HOME}/modules/webbd/lib/webbdpubportalspec.jar" />
+		<pathelement location="${NC_HOME}/modules/webdbl/classes/" />
+		<pathelement location="${NC_HOME}/modules/webdbl/lib/pubwebdbl_dbl.jar" />
+		<pathelement location="${NC_HOME}/modules/webdbl/lib/pubwebdbl_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/webdbl/lib/webdbldblportalspec.jar" />
+		<pathelement location="${NC_HOME}/modules/webdbl/lib/webdblpubportalspec.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/classes/" />
+		<pathelement location="${NC_HOME}/modules/webimp/lib/pubwebimp_imp.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/lib/pubwebimp_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/lib/pubwebimp_wfm.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/lib/webimpimpportalspec.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/lib/webimppubportalspec.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/lib/webimpwfmportalspec.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/classes/" />
+		<pathelement location="${NC_HOME}/modules/webrt/lib/pubwebrt_bc.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/lib/pubwebrt_ca.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/lib/pubwebrt_ds.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/lib/pubwebrt_pa.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/lib/pubwebrt_ra.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/classes/" />
+		<pathelement location="${NC_HOME}/modules/websm/lib/pubwebsm_pint.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/lib/pubwebsm_pmng.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/lib/pubwebsm_pserver.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/lib/pubwebsm_sm.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/lib/websmpintportalspec.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/lib/websmpmngportalspec.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/lib/websmpserverportalspec.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/lib/websmsmportalspec.jar" />
+	</path>
+	<path id="Module_Client_Library.libraryclasspath">
+		<pathelement location="${NC_HOME}/modules/uap/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuap_hradminorg.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuap_wordtemplate.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapbaseservice.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapbbd.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapbusibean.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapdatadict.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapdbcache.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapdbcachetool.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapeaa.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapeip.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapexcelimport.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapformula.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapjdbcframework.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuaplightscheduler.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapmddb.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapmessage.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapmultilanguage.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapncbean.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapncjca.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapncmd.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapnctools.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuaporg.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuaporgref.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapoutputTemplate.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapplatform.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapplatformapp.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapplatformclient.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapprealert.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuaprbac.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuaprbacapp.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapreport.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapsecurity.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapsecurityII.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapses.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapsfapp.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapsfbase.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapsystemframework.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuaptemplate.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuaptemplateframe.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapuifactory.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapUIFactoryII.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/client/lib/uiuapUIFactoryIIBasic.jar" />
+		<pathelement location="${NC_HOME}/modules/uapadp/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapadp/client/lib/uiuapadp.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_account.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_address.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_assign.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_assistant.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_balatype.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_bankacc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_batchupdate.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_bdbase.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_bom.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_brand.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_cashflow.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_channeltype.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_cmbasedoc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_ctbasedoc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_currinfo.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_customer.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_customersupplier.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_datatransfer.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_fibd.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_hrformula.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_hrtaholiday.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_hrtashift.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_hrutils.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_inoutbusiclass.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_material.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_measdoc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_mmbdpub.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_notetype.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_payterm.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_pmbase.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_prodline.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_psg.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_pst.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_qcbasedoc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_rack.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_scmbdpub.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_stordoc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_supplier.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_taxitemstaxrate.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_team.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_transporttype.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_vouchertype.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_workcalendar.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/client/lib/uiuapbd_workcenter.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbdsearch/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapde/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapde/client/lib/uiuapde_codegen.jar" />
+		<pathelement location="${NC_HOME}/modules/uapde/client/lib/uiuapde_codegenuif2.jar" />
+		<pathelement location="${NC_HOME}/modules/uapde/client/lib/uiuapde_modeldesigner.jar" />
+		<pathelement location="${NC_HOME}/modules/uapde/client/lib/uiuapde_modeldesignercore.jar" />
+		<pathelement location="${NC_HOME}/modules/uapeai/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapeai/client/lib/bounce-0.14.jar" />
+		<pathelement location="${NC_HOME}/modules/uapeai/client/lib/uiuapeai.jar" />
+		<pathelement location="${NC_HOME}/modules/uapws/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapws/client/lib/uiuapws.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/bap/client/lib/uibap_bap.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/client/lib/uibap_base.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/client/lib/uibap_pivot.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/client/lib/uibap_qdi.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/bapub/client/lib/uibapub_formula.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/client/lib/uibapub_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/client/lib/uibapub_report.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/client/lib/uibapub_smart.jar" />
+		<pathelement location="${NC_HOME}/modules/fip/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/fip/client/lib/uifip_fip.jar" />
+		<pathelement location="${NC_HOME}/modules/mabase/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/mabase/client/lib/uimabase_mabase.jar" />
+		<pathelement location="${NC_HOME}/modules/ncaam/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/ncaam/client/lib/uincaam.jar" />
+		<pathelement location="${NC_HOME}/modules/pubapp/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/pubapp/client/lib/uipubapp_pubapp.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/lib/uitbb_bean.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/lib/uitbb_cons.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/lib/uitbb_ctrl.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/lib/uitbb_cube.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/lib/uitbb_dim.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/lib/uitbb_dimdoc.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/lib/uitbb_form.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/lib/uitbb_limit.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/lib/uitbb_oba.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/lib/uitbb_plan.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/lib/uitbb_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/lib/uitbb_rule.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/client/lib/uitbb_task.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/ufofr/client/lib/uiufofr_bi.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/client/lib/uiufofr_browser.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/client/lib/uiufofr_designer.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/client/lib/uiufofr_portal.jar" />
+		<pathelement location="${NC_HOME}/modules/webad/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/webad/client/lib/uiwebad_ad.jar" />
+		<pathelement location="${NC_HOME}/modules/webad/client/lib/uiwebad_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/webbd/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/webbd/client/lib/uiwebbd_bd.jar" />
+		<pathelement location="${NC_HOME}/modules/webbd/client/lib/uiwebbd_comp.jar" />
+		<pathelement location="${NC_HOME}/modules/webbd/client/lib/uiwebbd_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/webdbl/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/webdbl/client/lib/uiwebdbl_dbl.jar" />
+		<pathelement location="${NC_HOME}/modules/webdbl/client/lib/uiwebdbl_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/webimp/client/lib/uiwebimp_imp.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/client/lib/uiwebimp_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/client/lib/uiwebimp_wfm.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/webrt/client/lib/uiwebrt_bc.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/client/lib/uiwebrt_ca.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/client/lib/uiwebrt_ds.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/client/lib/uiwebrt_pa.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/client/lib/uiwebrt_ra.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/client/classes/" />
+		<pathelement location="${NC_HOME}/modules/websm/client/lib/uiwebsm_pint.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/client/lib/uiwebsm_pmng.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/client/lib/uiwebsm_pserver.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/client/lib/uiwebsm_sm.jar" />
+	</path>
+	<path id="Module_Private_Library.libraryclasspath">
+		<pathelement location="${NC_HOME}/modules/bap/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/bap/META-INF/lib/bap_bap.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/META-INF/lib/bap_base.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/META-INF/lib/bap_pivot.jar" />
+		<pathelement location="${NC_HOME}/modules/bap/META-INF/lib/bap_qdi.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/META-INF/var/classes/" />
+		<pathelement location="${NC_HOME}/modules/bapub/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/bapub/META-INF/lib/bapub_formula.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/META-INF/lib/bapub_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/META-INF/lib/bapub_report.jar" />
+		<pathelement location="${NC_HOME}/modules/bapub/META-INF/lib/bapub_smart.jar" />
+		<pathelement location="${NC_HOME}/modules/fip/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/fip/META-INF/lib/fip_fip.jar" />
+		<pathelement location="${NC_HOME}/modules/mabase/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/mabase/META-INF/lib/mabase_mabase.jar" />
+		<pathelement location="${NC_HOME}/modules/ncaam/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/ncaam/META-INF/lib/ncaam.jar" />
+		<pathelement location="${NC_HOME}/modules/pubapp/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/pubapp/META-INF/lib/pubapp_pubapp.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/lib/tbb_bean.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/lib/tbb_cons.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/lib/tbb_ctrl.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/lib/tbb_cube.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/lib/tbb_dim.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/lib/tbb_dimdoc.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/lib/tbb_form.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/lib/tbb_limit.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/lib/tbb_oba.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/lib/tbb_plan.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/lib/tbb_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/lib/tbb_rule.jar" />
+		<pathelement location="${NC_HOME}/modules/tbb/META-INF/lib/tbb_task.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/lucene-analyzers-3.0.2.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/lucene-core-3.0.2.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/lucene-smartcn-3.0.2.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uap_hradminorg.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uap_wordtemplate.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapbaseservice.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapbbd.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapbusibean.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapdatadict.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapdbcache.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapeaa.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapeip.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapexcelimport.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapformula.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapjdbcframework.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uaplightscheduler.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapmddb.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapmessage.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapmultilanguage.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapncbean.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapncjca.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapncmd.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapnctools.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uaporg.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uaporgref.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapoutputTemplate.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapplatform.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapplatformapp.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapprealert.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uaprbac.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uaprbacapp.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapreport.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapscheduleengine.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapsecurity.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapsecurityII.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapses.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapsfapp.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapsfbase.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapsystemframework.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uaptemplate.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uaptemplateframe.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapuifactory.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapUIFactoryII.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapUIFactoryIIBasic.jar" />
+		<pathelement location="${NC_HOME}/modules/uap/META-INF/lib/uapwordtemplate.jar" />
+		<pathelement location="${NC_HOME}/modules/uapadp/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapadp/META-INF/lib/uapadp.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_bom.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_cmbasedoc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_ctbasedoc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_fibd.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_hrformula.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_hrtaholiday.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_hrtashift.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_hrutils.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_mmbdpub.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_pmbase.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_psg.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_pst.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_qcbasedoc.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_scmbdpub.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_team.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbd/META-INF/lib/uapbd_workcenter.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbdsearch/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapbdsearch/META-INF/lib/lucene-analyzers-3.0.2.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbdsearch/META-INF/lib/lucene-core-3.0.2.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbdsearch/META-INF/lib/lucene-smartcn-3.0.2.jar" />
+		<pathelement location="${NC_HOME}/modules/uapbdsearch/META-INF/lib/uapbdsearch.jar" />
+		<pathelement location="${NC_HOME}/modules/uapde/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapde/META-INF/lib/uapde_codegen.jar" />
+		<pathelement location="${NC_HOME}/modules/uapde/META-INF/lib/uapde_codegenuif2.jar" />
+		<pathelement location="${NC_HOME}/modules/uapde/META-INF/lib/uapde_modeldesigner.jar" />
+		<pathelement location="${NC_HOME}/modules/uapde/META-INF/lib/uapde_modeldesignercore.jar" />
+		<pathelement location="${NC_HOME}/modules/uapeai/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapeai/META-INF/lib/uapeai.jar" />
+		<pathelement location="${NC_HOME}/modules/uapws/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/uapws/META-INF/lib/uapws.jar" />
+		<pathelement location="${NC_HOME}/modules/uapws/META-INF/lib/wsdl4j-1.6.1.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/ufofr/META-INF/lib/ufofr_bi.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/META-INF/lib/ufofr_browser.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/META-INF/lib/ufofr_designer.jar" />
+		<pathelement location="${NC_HOME}/modules/ufofr/META-INF/lib/ufofr_portal.jar" />
+		<pathelement location="${NC_HOME}/modules/webad/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/webad/META-INF/lib/webad_ad.jar" />
+		<pathelement location="${NC_HOME}/modules/webad/META-INF/lib/webad_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/webbd/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/webbd/META-INF/lib/ldapsdk-4.1.jar" />
+		<pathelement location="${NC_HOME}/modules/webbd/META-INF/lib/webbd_bd.jar" />
+		<pathelement location="${NC_HOME}/modules/webbd/META-INF/lib/webbd_comp.jar" />
+		<pathelement location="${NC_HOME}/modules/webbd/META-INF/lib/webbd_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/webdbl/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/webdbl/META-INF/lib/webdbl_dbl.jar" />
+		<pathelement location="${NC_HOME}/modules/webdbl/META-INF/lib/webdbl_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/batik-bridge.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/batik-css.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/batik-dom.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/batik-svg-dom.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/batik-util.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/fop-1.0.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/generator.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/icepdf-core.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/icepdf-viewer.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/pdf-transcoder.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/serializer-2.7.1.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/webimp_imp.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/webimp_pub.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/webimp_wfm.jar" />
+		<pathelement location="${NC_HOME}/modules/webimp/META-INF/lib/xml-apis-ext.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/webrt/META-INF/lib/webrt_bc.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/META-INF/lib/webrt_ca.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/META-INF/lib/webrt_ds.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/META-INF/lib/webrt_pa.jar" />
+		<pathelement location="${NC_HOME}/modules/webrt/META-INF/lib/webrt_ra.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/META-INF/classes/" />
+		<pathelement location="${NC_HOME}/modules/websm/META-INF/lib/sfxzip.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/META-INF/lib/websm_pint.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/META-INF/lib/websm_pmng.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/META-INF/lib/websm_pserver.jar" />
+		<pathelement location="${NC_HOME}/modules/websm/META-INF/lib/websm_sm.jar" />
+	</path>
+	<path id="Module_Lang_Library.libraryclasspath">
+		<pathelement location="${NC_HOME}/langlib/bap_bap_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/bap_base_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/bap_olap_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/bap_pivot_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/bap_qdi_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/bapub_common_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/bapub_formula_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/bapub_funcode_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/bapub_pub_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/bapub_report_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/bapub_smart_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/fip_billtype_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/fip_fip_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/fip_funcode_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/fip_sysinit_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/mabase_common_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/mabase_funcode_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/mabase_mabase_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/ncaam_ncaam_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/pubapp_pubapp_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_bean_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_billtype_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_ctrl_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_cube_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_dim_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_dimdoc_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_form_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_funcode_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_limit_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_oba_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_plan_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_prealerttype_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_pub_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_rule_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_sysinit_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/tbb_task_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uap_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapadp_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_account_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_address_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_assign_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_assistant_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_balatype_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_bankacc_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_batchupdate_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_bdbase_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_bom_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_brand_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_cashflow_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_channeltype_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_cmbasedoc_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_common_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_ctbasedoc_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_currinfo_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_customer_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_customersupplier_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_fibd_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_funcode_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_hrformula_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_hrtaholiday_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_hrtashift_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_inoutbusiclass_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_material_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_measdoc_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_mmbdpub_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_notetype_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_payterm_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_pmbase_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_prodline_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_psg_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_pst_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_pub_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_qcbasedoc_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_rack_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_stordoc_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_supplier_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_sysinit_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_taxitemstaxrate_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_team_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_transporttype_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_vouchertype_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_workcalendar_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapbd_workcenter_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapde_modeldesigner_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapde_modeldesignercore_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/uapeai_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/ufofr_bi_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/ufofr_common_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/ufofr_funcode_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/ufofr_portal_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/webad_ad_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/webbd_bd_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/webbd_pub_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/webdbl_dbl_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/webimp_imp_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/webimp_wfm_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/webrt_bc_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/webrt_ca_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/webrt_ds_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/webrt_funcode_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/webrt_pa_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/webrt_ra_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/websm_padd_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/websm_pint_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/websm_pmng_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/websm_pserver_sim_langres.jar" />
+		<pathelement location="${NC_HOME}/langlib/websm_sm_sim_langres.jar" />
+	</path>
+	<path id="Generated_EJB.libraryclasspath" />
+
+    <path id="project_public">
+		<path refid="Ant_Library.libraryclasspath" />
+		<path refid="Product_Common_Library.libraryclasspath" />
+		<path refid="Middleware_Library.libraryclasspath" />
+		<path refid="Framework_Library.libraryclasspath" />
+		<path refid="Module_Public_Library.libraryclasspath" />
+		<path refid="Module_Lang_Library.libraryclasspath" />
+		<path refid="Generated_EJB.libraryclasspath" />
+    </path>
+    <path id="project_client">
+        <path refid="Ant_Library.libraryclasspath"/>
+        <path refid="Product_Common_Library.libraryclasspath"/>
+        <path refid="Middleware_Library.libraryclasspath"/>
+        <path refid="Framework_Library.libraryclasspath"/>
+        <path refid="Module_Public_Library.libraryclasspath"/>
+        <path refid="Module_Client_Library.libraryclasspath"/>
+        <path refid="Module_Lang_Library.libraryclasspath"/>
+        <path refid="Generated_EJB.libraryclasspath"/>
+    </path>
+    <path id="project_private">
+        <path refid="Ant_Library.libraryclasspath"/>
+        <path refid="Product_Common_Library.libraryclasspath"/>
+        <path refid="Middleware_Library.libraryclasspath"/>
+        <path refid="Framework_Library.libraryclasspath"/>
+        <path refid="Module_Public_Library.libraryclasspath"/>
+        <path refid="Module_Private_Library.libraryclasspath"/>
+        <path refid="Module_Lang_Library.libraryclasspath"/>
+        <path refid="Generated_EJB.libraryclasspath"/>
+    </path>
+    
+
+	<target name="init">
+		<delete dir="${DIR_MODULES}"/>
+		<mkdir dir="${DIR_PROJECT_PUBLIC_CLASSES}"/>
+		<mkdir dir="${DIR_PROJECT_CLIENT_CLASSES}"/>
+		<mkdir dir="${DIR_PROJECT_PRIVATE_CLASSES}"/>
+    </target>
+
+	<target name="project_publicjar" depends="init">
+		<javac debug="true" debuglevel="${debuglevel}" destdir="${DIR_PROJECT_PUBLIC_CLASSES}" encoding="GBK" source="${source}" target="${target}">
+			<src path="${Project_Workspace}/src/public" />
+			<classpath refid="project_public" />
+		</javac>
+		<jar compress="false" destfile="${DIR_PROJECT_PUBLIC}/${Project_Name}pub.jar">
+			<fileset dir="${DIR_PROJECT_PUBLIC_CLASSES}">
+				<include name="**/*.class" />
+			</fileset>
+		</jar>
+		<jar compress="false" destfile="${DIR_PROJECT_PUBLIC}/${Project_Name}pub_src.jar">
+			<fileset dir="${Project_Workspace}/src/public">
+				<include name="**/*.java" />
+			</fileset>
+		</jar>
+		<delete dir="${DIR_PROJECT_PUBLIC_CLASSES}"/>
+    </target>
+    
+	<target name="project_privatejar" depends="project_publicjar">
+		<javac debug="true" debuglevel="${debuglevel}" destdir="${DIR_PROJECT_PRIVATE_CLASSES}" encoding="GBK" source="${source}" target="${target}">
+			<src path="${Project_Workspace}/src/private" />
+			<classpath>
+				<pathelement location="${DIR_PROJECT_PUBLIC}/${Project_Name}pub.jar" />
+			</classpath>
+			<classpath refid="project_public" />
+			<classpath refid="project_private" />
+		</javac>
+		<jar compress="false" destfile="${DIR_PROJECT_PRIVATE}/${Project_Name}.jar">
+			<fileset dir="${DIR_PROJECT_PRIVATE_CLASSES}">
+				<include name="**/*.class" />
+			</fileset>
+		</jar>
+		<jar compress="false" destfile="${DIR_PROJECT_PRIVATE}/${Project_Name}_src.jar">
+			<fileset dir="${Project_Workspace}/src/private">
+				<include name="**/*.java" />
+			</fileset>
+		</jar>
+
+		<mkdir dir="${DIR_MODULES}/uap/classes"/>
+		<copy todir="${DIR_MODULES}/uap/classes">
+			<fileset dir="${DIR_PROJECT_PRIVATE_CLASSES}">
+				<include name="**/*/BeanListProcessor.class" />
+				<include name="**/*/BDConsistenceCheck.class" />
+			</fileset>
+			<fileset dir="${Project_Workspace}/src/private">
+				<include name="**/*/BeanListProcessor.java" />
+				<include name="**/*/BDConsistenceCheck.java" />
+			</fileset>
+		</copy>
+
+		<delete dir="${DIR_PROJECT_PRIVATE_CLASSES}"/>
+    </target>
+    
+	<target name="project_clientjar" depends="project_publicjar">
+		<javac debug="true" debuglevel="${debuglevel}" destdir="${DIR_PROJECT_CLIENT_CLASSES}" encoding="GBK" source="${source}" target="${target}">
+			<src path="${Project_Workspace}/src/client" />
+			<classpath>
+				<pathelement location="${DIR_PROJECT_PUBLIC}/${Project_Name}pub.jar" />
+			</classpath>
+			<classpath refid="project_public" />
+			<classpath refid="project_client" />
+		</javac>
+		<jar compress="false" destfile="${DIR_PROJECT_CLIENT}/ui${Project_Name}.jar">
+			<fileset dir="${DIR_PROJECT_CLIENT_CLASSES}">
+				<include name="**/*.class" />
+			</fileset>
+		</jar>
+		<jar compress="false" destfile="${DIR_PROJECT_CLIENT}/ui${Project_Name}ui_src.jar">
+			<fileset dir="${Project_Workspace}/src/client">
+				<include name="**/*.java" />
+			</fileset>
+		</jar>
+		<delete dir="${DIR_PROJECT_CLIENT_CLASSES}"/>
+    </target>
+
+	<tstamp>
+		<format property="TODAY_CN" pattern="yyyyMMdd" locale="zh"/>
+	</tstamp>
+	<tstamp>
+		<format property="NOW" pattern="yyyy-MM-dd HH:mm:ss" offset="-5" unit="hour"/>
+	</tstamp>
+	 <!-- //输出的日期格式定义  -->
+	<target name="timestampTarget" >
+		<echo message="${TODAY_CN}" />
+		<echo message="${NOW}" />
+	</target>
+
+	<target name="build_nc" depends="project_publicjar,project_clientjar,project_privatejar">
+	</target>
+
+	<target name="build" depends="build_nc">
+		<copy todir="${DIR_PROJECT_MODULE}">
+			<fileset dir="${Project_Workspace}">
+				<include name="METADATA/**/*" />
+				<include name="META-INF/**/*" />
+			</fileset>
+		</copy>
+		<jar compress="false" destfile="${Project_Workspace}/install/${Project_Name}_${TODAY_CN}.jar">
+			<fileset dir="d:/temp" >
+				<include name="/modules/**/*" />
+			</fileset>
+			<fileset dir="${NC_HOME}" >
+				<include name="/hotwebs/ajaxnc/**/*" />
+			</fileset>
+		</jar>
+	</target>
+</project>

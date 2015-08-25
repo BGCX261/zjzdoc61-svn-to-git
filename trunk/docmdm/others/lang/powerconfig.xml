@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='gb2312'?>
+<config>
+	<PowerConfig>
+		<SuperAdmPower>
+			<menu menuitemcode='109990' menuitemname='系统管理' isLeafMenu='Y'>
+				<func funcode='109990' class_name='nc.bcmanage.ui.BCManageUI' fun_name='系统管理' own_module='10' />
+			</menu>
+			<!--<menu menuitemcode='109991' menuitemname='数据导出' isLeafMenu='Y'> <func funcode='109991' class_name='nc.ui.pf.export.ExportUI' fun_name='数据导出' own_module='10' /> </menu> <menu menuitemcode='109992' menuitemname='初始化数据' isLeafMenu='Y'> <func funcode='109992' class_name='nc.ui.pub.dataxml.GeneInitDataUI' 
+				fun_name='初始化数据' own_module='10' /> </menu> -->
+			<menu menuitemcode='109993' menuitemname='密码策略' isLeafMenu='Y'>
+				<func funcode='109993' class_name='nc.ui.uap.rbac.userpassword.PasswordSecurityLevelUI' fun_name='密码策略' own_module='10' />
+			</menu>
+			<menu menuitemcode='109994' menuitemname='超级管理员' isLeafMenu='Y'>
+				<func funcode='109994' class_name='nc.bcmanage.superadm.ui.SuperAdmUI' fun_name='超级管理员' own_module='10' />
+			</menu>
+			<menu menuitemcode='109995' menuitemname='双引擎配置' isLeafMenu='Y'>
+				<func funcode='109995' class_name='nc.bcmanage.reportdb.ui.ReportDBUI' fun_name='双引擎配置' own_module='10' />
+			</menu>
+			<menu menuitemcode='109996' menuitemname='业务日志' isLeafMenu='Y'>
+				<func funcode='109996' class_name='nc.ui.sm.busilogui.BusiLogManageUI' fun_name='业务日志' own_module='10' />
+			</menu>
+			<menu menuitemcode='109997' menuitemname='上机日志' isLeafMenu='Y'>
+				<func funcode='109997' class_name='nc.ui.sm.complog.ui.ComputerLogManageUI' fun_name='上机日志' own_module='10' />
+			</menu>
+
+		</SuperAdmPower>
+		<BusicenterAdmPower>
+			<!--领域一 -->
+			<menu menuitemcode='aa' menuitemname='应用系统管理' resid='Daa' isLeafMenu='N'></menu>
+			<menu menuitemcode='aa01' menuitemname='系统初始化' resid='D1000' isLeafMenu='N'></menu>
+			<menu menuitemcode='aa0108' menuitemname='管控模式' resid='D100008' isLeafMenu='Y'>
+				<func funcode='10100BMDC' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='管控模式' own_module='1000'></func>
+			</menu>
+			<menu menuitemcode='aa0102' menuitemname='集团管理 ' resid='D100002' isLeafMenu='Y'>
+				<func funcode='10100GM' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='集团管理' own_module='1000'></func>
+			</menu>
+			<menu menuitemcode='aa0106' menuitemname='业务初始化' resid='D100006' isLeafMenu='Y'>
+				<func funcode='10000GI' class_name='nc.ui.sm.createcorp.CreateCorpAccountUI' fun_name='业务初始化' own_module='1000'></func>
+			</menu>
+			<menu menuitemcode='aa0104' menuitemname='集团管理员' resid='D100004' isLeafMenu='Y'>
+				<func funcode='10100GAM' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='集团管理员' own_module='1000'></func>
+			</menu>
+			<menu menuitemcode='aa0110' menuitemname='集团管理员功能管理' resid='D100010' isLeafMenu='Y'>
+				<func funcode='10000MFM' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='集团管理员功能管理' own_module='1000'></func>
+			</menu>
+			<menu menuitemcode='aa0112' menuitemname='参数级次管理' resid='Daa0112' isLeafMenu='Y'>
+				<func funcode='13050IMPLPATP' class_name='nc.ui.pub.paratemp.PfParaTempSetUI4Implementing' fun_name='参数级次管理' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='aa0114' menuitemname='系统参数设置' resid='Daa0114' isLeafMenu='Y'>
+				<func funcode='10140SYSPARA' class_name='nc.ui.pub.para.PfParaSetUI' fun_name='系统参数设置' own_module='1014'></func>
+			</menu>
+			<menu menuitemcode='aa02' menuitemname='应用系统配置' resid='Daa02' isLeafMenu='N'></menu>
+			<menu menuitemcode='aa0254' menuitemname='客户端任务定义' resid='D103012' isLeafMenu='Y'>
+				<func funcode='100054MNT' class_name='nc.clienttask.ui.TaskDefineUI' fun_name='客户端任务定义' own_module='10' />
+			</menu>
+			<menu menuitemcode='aa0255' menuitemname='客户端任务分配' resid='D103013' isLeafMenu='Y'>
+				<func funcode='100055MNT' class_name='nc.clienttask.ui.TaskDeliverUI' fun_name='客户端任务分配' own_module='10' />
+			</menu>
+			<menu menuitemcode='aa0277' menuitemname='消息管道配置' resid='D10190205' isLeafMenu='Y'>
+				<func funcode='1019MSS' class_name='nc.message.msgmanage.ui.MsgSendTypeConfigUI' fun_name='消息管道配置' own_module='10'></func>
+			</menu>
+			<menu menuitemcode='aa03' menuitemname='应用系统监控' resid='Daa03' isLeafMenu='N'></menu>
+			<!--Append By Dominic Inorder To Meet New Demands Since NC6.1 Feb.21st.2012 -->
+			<menu menuitemcode='aa0301' menuitemname='集团管理日志' resid='Daa0301' isLeafMenu='N'></menu>
+			<menu menuitemcode='aa030101' menuitemname='业务日志' resid='Daa030101' isLeafMenu='Y'>
+				<func funcode='10220ULOG' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='业务日志' own_module='10' />
+			</menu>
+			<menu menuitemcode='aa030103' menuitemname='上机日志' resid='Daa030103' isLeafMenu='Y'>
+				<func funcode='10220URLOG' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='上机日志' own_module='10' />
+			</menu>
+			<menu menuitemcode='aa0303' menuitemname='上机监控' resid='D103007' isLeafMenu='N'></menu>
+			<menu menuitemcode='aa030301' menuitemname='系统监视器' resid='D10300701' isLeafMenu='Y'>
+				<func funcode='10200SMNT' class_name='nc.ui.sm.sysmonitor.SysMonitorUI' fun_name='系统监视器' own_module='10' />
+			</menu>
+			<!--Append By Dominic Inorder To Meet New Demands Since NC6.1 Mar.13ird.2012 -->
+			<menu menuitemcode='aa0305' menuitemname='消息监控' resid='Daa0305' isLeafMenu='N'></menu>
+			<menu menuitemcode='aa030501' menuitemname='消息管理中心' resid='Daa030501' isLeafMenu='Y'>
+				<func funcode='1019MSMC' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='消息管理中心' own_module='10' />
+			</menu>
+			<!--领域二 -->
+			<menu menuitemcode='bb' menuitemname='应用管理平台' resid='D13' isLeafMenu='N'></menu>
+			<menu menuitemcode='bb01' menuitemname='开发配置工具' resid='D1410' isLeafMenu='N'></menu>
+			<menu menuitemcode='bb0101' menuitemname='系统管理工具 ' resid='D141001' isLeafMenu='N'></menu>
+			<menu menuitemcode='bb010100' menuitemname='缓存管理' resid='D14100101' isLeafMenu='Y'>
+				<func funcode='13050101' class_name='nc.ui.dbcache.gui.CacheManagerUI' fun_name='缓存管理' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb010102' menuitemname='操作流程设计' resid='D14100102' isLeafMenu='Y'>
+				<func funcode='13050109' class_name='nc.ui.sm.flowdesktop.FlowPreservePanel' fun_name='操作流程设计' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb010104' menuitemname='功能节点默认模板设置' resid='D13050103' isLeafMenu='Y'>
+				<func funcode='1305DETEMP' class_name='nc.ui.pub.pftemplate.setting.DefaultTemplateSettingUI' fun_name='功能节点默认模板设置' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb010106' menuitemname='元数据管理' resid='D14100110' isLeafMenu='Y'>
+				<func funcode='13050103' class_name='nc.ui.md.manager.gui.MDManagerUI' fun_name='元数据管理' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb010108' menuitemname='元数据过滤管理' resid='D14100111' isLeafMenu='Y'>
+				<func funcode='13050105' class_name='nc.ui.md.mdtreeconfig.MDTreeConfigUI' fun_name='元数据过滤管理' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb010110' menuitemname='个性化资源类型注册' resid='D13050113' isLeafMenu='Y'>
+				<func funcode='13050PSREG' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='个性化资源类型注册' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb0103' menuitemname='功能注册 ' resid='D130503' isLeafMenu='Y'>
+				<func funcode='13050FUCR' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='功能注册' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb0105' menuitemname='业务实体管理 ' resid='D130507' isLeafMenu='Y'>
+				<func funcode='13050BUSIE' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='业务实体管理' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb0107' menuitemname='菜单注册 ' resid='D130505' isLeafMenu='Y'>
+				<func funcode='1305MENURE' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='菜单注册' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb0109' menuitemname='个性化注册 ' resid='D130509' isLeafMenu='Y'>
+				<func funcode='1305PREGI' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='个性化注册' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb0111' menuitemname='基本档案管控模式注册 ' resid='D130511' isLeafMenu='Y'>
+				<func funcode='13050BMDM' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='基本档案管控模式注册' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb0113' menuitemname='组织关系建模 ' resid='D130513' isLeafMenu='Y'>
+				<func funcode='13050ORTM' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='组织关系建模' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb0115' menuitemname='模板管理' resid='D130515' isLeafMenu='N'></menu>
+			<menu menuitemcode='bb011501' menuitemname='单据模板初始化 ' resid='D13051501' isLeafMenu='Y'>
+				<func funcode='1305BILLCR' class_name='nc.ui.bill.tools.MainPanelDev' fun_name='单据模板初始化' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb011503' menuitemname='查询模板初始化 ' resid='D13051503' isLeafMenu='Y'>
+				<func funcode='1305QURYCR' class_name='nc.ui.pub.query.QueryInitTool' fun_name='查询模板初始化' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb011507' menuitemname='输出模板初始化 ' resid='D13051505' isLeafMenu='Y'>
+				<func funcode='1305OUTPUT' class_name='nc.ui.pub.print.PrintTemplateInitTool' fun_name='输出模板初始化' own_module='1305'></func>
+			</menu>
+
+			<menu menuitemcode='bb0117' menuitemname='编码对象注册 ' resid='D130514' isLeafMenu='Y'>
+				<func funcode='1305NBCR' class_name='nc.pub.billcode.regtool.ui.NBCRregUI' fun_name='编码对象注册' own_module='1305'></func>
+			</menu>
+			<!--<menu menuitemcode='bb0118' menuitemname='全局编码映射 ' resid='' isLeafMenu='Y'> <func funcode='10180BCEGLB' class_name='nc.pub.billcode.entitymng.ui.CodeEntityManageUI' fun_name='全局编码映射' own_module='1305' ></func> </menu> -->
+			<menu menuitemcode='bb0121' menuitemname='会计平台' isLeafMenu='N'></menu>
+			<menu menuitemcode='bb0123' menuitemname='交易管理' resid='D141020' isLeafMenu='N'></menu>
+			<menu menuitemcode='bb012301' menuitemname='单据类型管理 ' resid='D14102001' isLeafMenu='Y'>
+				<func funcode='13050201' class_name='nc.ui.pub.billtype.BillTypeManageUI' fun_name='单据类型管理' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb012303' menuitemname='单据函数注册 ' resid='D14102002' isLeafMenu='Y'>
+				<func funcode='13050203' class_name='nc.ui.pf.changeui.VoFunctionDefUI' fun_name='单据函数注册' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb012305' menuitemname='流程组件注册 ' resid='D14102003' isLeafMenu='Y'>
+				<func funcode='13050205' class_name='nc.ui.pf.workflow.WFModuleManageUI' fun_name='流程组件注册' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb012307' menuitemname='单据动作管理 ' resid='D14102004' isLeafMenu='Y'>
+				<func funcode='13050207' class_name='nc.ui.pub.billaction.BillactionManageUI' fun_name='单据动作管理' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb012309' menuitemname='单据动作脚本 ' resid='D14102005' isLeafMenu='Y'>
+				<func funcode='13050209' class_name='nc.ui.pub.pfflow.script.BillActionScriptUI' fun_name='单据动作脚本' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb012311' menuitemname='单据动作组管理 ' resid='D14102007' isLeafMenu='Y'>
+				<func funcode='13050211' class_name='nc.ui.pub.actiongroup.BillActGrpManage' fun_name='单据动作组管理' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb012313' menuitemname='单据转换规则 ' resid='D14102008' isLeafMenu='Y'>
+				<func funcode='13050213' class_name='nc.ui.pf.changeui.BillMappingUI' fun_name='单据转换规则' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb012315' menuitemname='分单依据注册 ' resid='D14102020' isLeafMenu='Y'>
+				<func funcode='13050215' class_name='nc.ui.pf.split.SplitRuleRegisterUI' fun_name='分单依据注册' own_module='1305'></func>
+			</menu>
+
+			<menu menuitemcode='bb0124' menuitemname='系统平台' resid='D130519' isLeafMenu='N'></menu>
+			<menu menuitemcode='bb012401' menuitemname='预警类型注册' resid='D141060' isLeafMenu='Y'>
+				<func funcode='13050301' class_name='nc.ui.pub.pa.taskcenter.AlertTypeRegisterUI' fun_name='预警类型注册' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb012403' menuitemname='后台任务类型注册' resid='D141062' isLeafMenu='Y'>
+				<func funcode='13050303' class_name='nc.ui.pub.pa.taskcenter.TaskRegisterUI' fun_name='后台任务类型注册' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb012405' menuitemname='消息类型' resid='D13051902' isLeafMenu='Y'>
+				<func funcode='13050MNT' class_name='nc.message.msgmanage.ui.MsgTypeConfigUI' fun_name='消息类型' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb012407' menuitemname='消息模板类型注册' resid='D13051907' isLeafMenu='Y'>
+				<func funcode='1305MSG' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='消息模板分类' own_module='1305'></func>
+			</menu>
+			<!-- <menu menuitemcode='bb012409' menuitemname='消息模板' resid='D10190206' isLeafMenu='Y'> <func funcode='1019MSTGLOBAL' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='消息模板' own_module='1019' ></func> </menu> -->
+			<menu menuitemcode='bb0129' menuitemname='参数模板设置' resid='D130521' isLeafMenu='Y'>
+				<func funcode='13050PATP' class_name='nc.ui.pub.paratemp.PfParaTempSetUI' fun_name='参数模板设置' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb0125' menuitemname='业务插件注册' resid='D13050111' isLeafMenu='Y'>
+				<func funcode='13050BELR' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='业务插件注册' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb0126' menuitemname='组件扩展点插件注册' isLeafMenu='Y' resid='Dbb0126'>
+				<func funcode='13050PLGIN' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='组件扩展点插件注册' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb0127' menuitemname='用户定义属性组' resid='D130525' isLeafMenu='Y'>
+				<func funcode='13050UDRB' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='用户定义属性组' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb0133' menuitemname='查询指标设置' resid='D130523' isLeafMenu='Y'>
+				<func funcode='13050CXZB' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='查询指标设置' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb0135' menuitemname='分配页签注册' resid='D130531' isLeafMenu='Y'>
+				<func funcode='13050ASPGR' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='分配页签注册' own_module='1305'></func>
+			</menu>
+			<menu menuitemcode='bb0137' menuitemname='业务对象操作注册' resid='D141050' isLeafMenu='Y'>
+				<func funcode='13050107' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='业务对象操作注册' own_module='1305'></func>
+			</menu>
+			<!-- <menu menuitemcode='bb0147' menuitemname='测试服务' resid='D130541' isLeafMenu='Y'> <func funcode='14100IST' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='测试服务' own_module='1305' ></func> </menu> <menu menuitemcode='bb0149' menuitemname='测试业务插件监听' resid='D130542' isLeafMenu='Y'> <func funcode='14100BELB' 
+				class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='测试业务插件监听' own_module='1305' ></func> </menu> <menu menuitemcode='bb0151' menuitemname='测试参照' resid='D130540' isLeafMenu='Y'> <func funcode='14100RT' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='测试参照' own_module='1305' ></func> </menu> -->
+			<menu menuitemcode='bb02' menuitemname='集群监控' isLeafMenu='N'></menu>
+			<menu menuitemcode='bb03' menuitemname='应用资产管理' resid='D1312' isLeafMenu='N'></menu>
+			<menu menuitemcode='bb0301' menuitemname='资产类型管理' resid='D131210' isLeafMenu='Y'>
+				<func funcode='13120AATM' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='资产类型管理' own_module='1312'></func>
+			</menu>
+			<menu menuitemcode='bb0302' menuitemname='行业管理' resid='D131215' isLeafMenu='Y'>
+				<func funcode='13120AAIM' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='行业管理' own_module='1312'></func>
+			</menu>
+			<menu menuitemcode='bb0303' menuitemname='本地化管理' resid='D131220' isLeafMenu='Y'>
+				<func funcode='13120AACZM' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='本地化管理' own_module='1312'></func>
+			</menu>
+			<menu menuitemcode='bb0304' menuitemname='研发机构管理' resid='D131230' isLeafMenu='Y'>
+				<func funcode='13120AADOM' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='研发机构管理' own_module='1312'></func>
+			</menu>
+			<menu menuitemcode='bb0305' menuitemname='开发者管理' resid='D131240' isLeafMenu='Y'>
+				<func funcode='13120AADM' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='开发者管理' own_module='1312'></func>
+			</menu>
+			<menu menuitemcode='bb0306' menuitemname='资产管理' resid='D131250' isLeafMenu='Y'>
+				<func funcode='13120AAM' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='资产管理' own_module='1312'></func>
+			</menu>
+			<menu menuitemcode='bb04' menuitemname='补丁管理' isLeafMenu='N'></menu>
+			<menu menuitemcode='bb05' menuitemname='数据迁移工具' resid='D1315' isLeafMenu='N'>
+			</menu>
+			<menu menuitemcode='bb0502' menuitemname='组织迁移' resid='D131502' isLeafMenu='Y'>
+				<func funcode='1315MORG' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='组织迁移' own_module='1315'></func>
+			</menu>
+			<menu menuitemcode='bb0504' menuitemname='基本档案迁移' resid='D131504' isLeafMenu='Y'>
+				<func funcode='1315MBD' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='基本档案迁移' own_module='1315'></func>
+			</menu>
+			<menu menuitemcode='bb0520' menuitemname='财务迁移' resid='D131520' isLeafMenu='N'></menu>
+			<menu menuitemcode='bb052002' menuitemname='总账迁移' resid='D13152002' isLeafMenu='Y'>
+				<func funcode='13152002' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='总账迁移' own_module='1315'></func>
+			</menu>
+
+			<!--领域三 -->
+			<menu menuitemcode='cc' menuitemname='应用开发平台' isLeafMenu='N' resid='Dcc14'></menu>
+			<menu menuitemcode='cc01' menuitemname='集成开发平台' resid='D1401' isLeafMenu='N'></menu>
+			<menu menuitemcode='cc0101' menuitemname='集成开发工具' resid='D140101' isLeafMenu='Y'>
+				<func funcode='14120DEVEP' class_name='nc.ui.uapde.entry.UAPDEUIEntry' fun_name='集成开发工具' own_module='1412'></func>
+			</menu>
+			<menu menuitemcode='cc02' menuitemname='报表平台' isLeafMenu='N'></menu>
+			<menu menuitemcode='cc03' menuitemname='分析平台' isLeafMenu='N'></menu>
+			<menu menuitemcode='cc04' menuitemname='计划平台' isLeafMenu='N'></menu>
+			<menu menuitemcode='cc05' menuitemname='统一构造工具' isLeafMenu='N'></menu>
+			<menu menuitemcode='cc06' menuitemname='测试用例管理' isLeafMenu='N'></menu>
+			<!--领域四 -->
+			<menu menuitemcode='dd' menuitemname='集成平台' isLeafMenu='N' resid='D12'></menu>
+			<menu menuitemcode='dd01' menuitemname='企业服务总线' resid='D1210' isLeafMenu='N'></menu>
+			<menu menuitemcode='dd02' menuitemname='主数据管理' resid='D1216' isLeafMenu='N'></menu>
+			<menu menuitemcode='dd03' menuitemname='数据交换管理' resid='D1221' isLeafMenu='N'></menu>
+			<menu menuitemcode='dd04' menuitemname='NC分布系统管理' resid='D1223' isLeafMenu='N'></menu>
+			<!--分布式传输工具 mazqa -->
+			<menu menuitemcode='dd0401' menuitemname='分布式系统设置' resid='D122301' isLeafMenu='N'></menu>
+			<menu menuitemcode='dd040101' menuitemname='分布系统目录' resid='D12230101' isLeafMenu='Y'>
+				<func funcode='12230101' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='分布系统目录' own_module='1223'></func>
+			</menu>
+			<menu menuitemcode='dd040102' menuitemname='资源控制配置' resid='D12230102' isLeafMenu='Y'>
+				<func funcode='12230102' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='资源控制配置' own_module='1223'></func>
+			</menu>
+			<menu menuitemcode='dd0403' menuitemname='发送接收管理' resid='D122302' isLeafMenu='N'></menu>
+			<menu menuitemcode='dd040301' menuitemname='发送管理' resid='D12230201' isLeafMenu='Y'>
+				<func funcode='12230201' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='发送管理' own_module='1223'></func>
+			</menu>
+			<menu menuitemcode='dd040303' menuitemname='接收管理' resid='D12230202' isLeafMenu='Y'>
+				<func funcode='12230202' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='接收管理' own_module='1223'></func>
+			</menu>
+			<menu menuitemcode='dd040305' menuitemname='传输任务' resid='D12230203' isLeafMenu='Y'>
+				<func funcode='12230203' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='传输任务' own_module='1223'></func>
+			</menu>
+			<menu menuitemcode='dd040307' menuitemname='传输日志' resid='D12230204' isLeafMenu='Y'>
+				<func funcode='12230204' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='传输日志' own_module='1223'></func>
+			</menu>
+			<menu menuitemcode='dd0405' menuitemname='开发平台' resid='D122303' isLeafMenu='N'></menu>
+			<menu menuitemcode='dd040501' menuitemname='传输资源注册' resid='D12230301' isLeafMenu='Y'>
+				<func funcode='12230301' class_name='nc.ui.uif2.ToftPanelAdaptor' fun_name='传输资源注册' own_module='1223'></func>
+			</menu>
+
+			<!-- 主数据 -->
+			<menu menuitemcode='79' menuitemname='财务基本档案' isLeafMenu='N' resid='D79'></menu>
+			<menu menuitemcode='7901' menuitemname='档案管理' isLeafMenu='N' resid='D7901'></menu>
+			
+			<!-- 展示一区 -->
+			<menu menuitemcode='790101' menuitemname='档案属性' isLeafMenu='N' resid='D790101'></menu>
+			<menu menuitemcode='79010101' menuitemname='地区档案' isLeafMenu='Y' resid='D79010101'>
+				<func funcode='79010101' class_name='nc.ui.mdm.base.TreeCardUI' fun_name='地区档案' own_module='79'></func>
+			</menu>
+			<menu menuitemcode='79010102' menuitemname='行业档案' isLeafMenu='Y' resid='D79010102'>
+				<func funcode='79010102' class_name='nc.ui.mdm.base.TreeCardUI' fun_name='行业档案' own_module='79'></func>
+			</menu>
+			<menu menuitemcode='79010103' menuitemname='内部客商分类' isLeafMenu='Y' resid='D79010103'>
+				<func funcode='79010103' class_name='nc.ui.mdm.base.TreeCardUI' fun_name='内部客商分类' own_module='79'></func>
+			</menu>
+			<menu menuitemcode='79010104' menuitemname='单位口径' isLeafMenu='Y' resid='D79010104'>
+				<func funcode='79010104' class_name='nc.ui.mdm.base.TreeCardUI' fun_name='单位口径' own_module='79'></func>
+			</menu>
+
+			<!-- 展示二区 -->
+			<menu menuitemcode='790102' menuitemname='档案内容' isLeafMenu='N' resid='D790102'></menu>
+			<menu menuitemcode='79010201' menuitemname='单位档案' isLeafMenu='Y' resid='D79010201'>
+				<func funcode='79010201' class_name='nc.ui.mdm.base.TreeCardUI' fun_name='单位档案' own_module='79'></func>
+			</menu>
+			<menu menuitemcode='79010202' menuitemname='内部客商' isLeafMenu='Y' resid='D79010202'>
+				<func funcode='79010202' class_name='nc.ui.mdm.base.TreeCardUI' fun_name='内部客商' own_module='79'></func>
+			</menu>
+			<menu menuitemcode='79010203' menuitemname='会计科目' isLeafMenu='Y' resid='D79010203'>
+				<func funcode='79010203' class_name='nc.ui.mdm.base.TreeCardUI' fun_name='会计科目' own_module='79'></func>
+			</menu>
+			<menu menuitemcode='79010204' menuitemname='现金流量项目' isLeafMenu='Y' resid='D79010204'>
+				<func funcode='79010204' class_name='nc.ui.mdm.base.TreeCardUI' fun_name='现金流量项目' own_module='79'></func>
+			</menu>
+			<menu menuitemcode='79010205' menuitemname='固定资产类型' isLeafMenu='Y' resid='D79010205'>
+				<func funcode='79010205' class_name='nc.ui.mdm.base.TreeCardUI' fun_name='现金流量项目' own_module='79'></func>
+			</menu>
+
+			<menu menuitemcode='79010221' menuitemname='项目类型' isLeafMenu='Y' resid='D79010221'>
+				<func funcode='79010221' class_name='nc.ui.mdm.base.SingleBodyUI' fun_name='项目类型' own_module='79'></func>
+			</menu>
+			<menu menuitemcode='79010222' menuitemname='存货分类' isLeafMenu='Y' resid='D79010222'>
+				<func funcode='79010222' class_name='nc.ui.mdm.base.SingleBodyUI' fun_name='存货分类' own_module='79'></func>
+			</menu>
+			<menu menuitemcode='79010223' menuitemname='结算方式' isLeafMenu='Y' resid='D79010223'>
+				<func funcode='79010223' class_name='nc.ui.mdm.base.SingleBodyUI' fun_name='结算方式' own_module='79'></func>
+			</menu>
+
+			<menu menuitemcode='7902' menuitemname='系统设置' isLeafMenu='N' resid='D7902'></menu>
+
+			<menu menuitemcode='790201' menuitemname='服务设置' isLeafMenu='N' resid='D790201'></menu>
+			<menu menuitemcode='79020101' menuitemname='外系统注册' isLeafMenu='Y' resid='D79020101'>
+				<func funcode='79020101' class_name='nc.ui.mdm.base.SingleBodyUI' fun_name='外系统注册' own_module='79'></func>
+			</menu>
+			<menu menuitemcode='79020102' menuitemname='接口设置' isLeafMenu='Y' resid='D79020102'>
+				<func funcode='79020102' class_name='nc.ui.mdm.base.SingleBodyUI' fun_name='接口设置' own_module='79'></func>
+			</menu>
+			<menu menuitemcode='79020103' menuitemname='主数据类型' isLeafMenu='Y' resid='D79020103'>
+				<func funcode='79020103' class_name='nc.ui.mdm.base.SingleBodyUI' fun_name='主数据类型' own_module='79'></func>
+			</menu>
+			
+			<menu menuitemcode='790202' menuitemname='逻辑设置' isLeafMenu='N' resid='D790202'></menu>
+			<menu menuitemcode='79020201' menuitemname='唯一检查' isLeafMenu='Y' resid='D79020201'>
+				<func funcode='79020201' class_name='nc.ui.mdm.base.SingleBodyUI' fun_name='唯一检查' own_module='79'></func>
+			</menu>
+			<menu menuitemcode='79020202' menuitemname='参照设置' isLeafMenu='Y' resid='D79020202'>
+				<func funcode='79020202' class_name='nc.ui.mdm.base.SingleBodyUI' fun_name='参照设置' own_module='79'></func>
+			</menu>
+
+			<menu menuitemcode='790203' menuitemname='数据处理' isLeafMenu='Y' resid='D790203'></menu>
+			<menu menuitemcode='79020301' menuitemname='数据导入' isLeafMenu='Y' resid='D79020301'>
+				<func funcode='79020301' class_name='nc.ui.mdm.base.SingleBodyUI' fun_name='数据导入' own_module='79'></func>
+			</menu>
+		</BusicenterAdmPower>
+	</PowerConfig>
+</config>       
+
+
+
+
+
+
+

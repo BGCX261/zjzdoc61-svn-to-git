@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module>
+	<public>
+		<component name="MdmService" >
+			<interface>nc.pub.mdm.ws.IDocMdmService</interface>
+			<implementation>nc.bs.mdm.ws.DocMdmServiceImpl</implementation>
+			<extension class="nc.uap.ws.deploy.OxbWSExtensionProcessor">
+				<wsdl>/nc/pub/mdm/ws/IDocMdmService.wsdl</wsdl>
+				<address>/nc.pub.mdm.ws.IDocMdmService</address>
+			</extension>
+		</component>
+	</public>
+	<private>
+	</private>
+</module>

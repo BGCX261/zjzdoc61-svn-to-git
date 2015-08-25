@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component conRouterType="手动" createIndustry="0" createTime="2012-11-08 10:53:07" creator="" description="" displayName="SYS主数据类型" fromSourceBmf="true" gencodestyle="NC传统样式" help="" id="fef9af7b-7a29-4453-b11e-704136c0b64b" industry="0" industryChanged="false" industryIncrease="false" industryName="基础行业" isSource="false" isbizmodel="false" mainEntity="5920c213-1ca4-40aa-8ab6-8a8f0d1af85b" modifier="" modifyIndustry="0" modifyTime="2012-11-08 10:58:30" name="doctype" namespace="docmdm" ownModule="docmdm" preLoad="false" programcode="" resModuleName="doctype" resid="" version="2" versionType="0">
+    <celllist>
+        <entity accessorClassName="nc.md.model.access.javamap.POJOStyle" bizItfImpClassName="" componentID="fef9af7b-7a29-4453-b11e-704136c0b64b" createIndustry="0" createTime="2012-11-08 10:53:19" creator="" czlist="" description="" displayName="主数据类型" fullClassName="nc.vodocmdm.doctype.doctype" height="148" help="" id="5920c213-1ca4-40aa-8ab6-8a8f0d1af85b" industryChanged="false" isAuthen="true" isCreateSQL="true" isExtendBean="false" isPrimary="true" isSource="false" keyAttributeId="3c7b35f0-90c8-4151-87c7-bbe1b149fcf4" modInfoClassName="" modifier="" modifyIndustry="0" modifyTime="2012-11-08 11:01:58" name="doctype" resid="" stereoType="" tableName="docmdm_sys_doctype" userDefClassName="" versionType="0" visibility="public" width="80" x="196" y="43">
+            <attributelist>
+                <attribute accessStrategy="" accesspower="false" accesspowergroup="" calculation="false" classID="5920c213-1ca4-40aa-8ab6-8a8f0d1af85b" createIndustry="0" dataType="BS000010000100001001" dataTypeStyle="SINGLE" dbtype="varchar" defaultValue="" description="" displayName="主键" dynamic="false" dynamicTable="" fieldName="pk_obj" fieldType="varchar" fixedLength="false" forLocale="false" help="" id="3c7b35f0-90c8-4151-87c7-bbe1b149fcf4" industryChanged="false" isActive="true" isAuthorization="true" isDefaultDimensionAttribute="false" isDefaultMeasureAttribute="false" isFeature="false" isGlobalization="false" isHide="false" isKey="true" isNullable="false" isReadOnly="false" isShare="false" isSource="true" length="50" maxValue="" minValue="" modifyIndustry="0" name="pk_obj" notSerialize="false" precise="" refModelName="" resid="" sequence="0" typeDisplayName="String" typeName="String" versionType="0" visibility="public"/>
+                <attribute accessStrategy="" accesspower="false" accesspowergroup="" calculation="false" classID="5920c213-1ca4-40aa-8ab6-8a8f0d1af85b" createIndustry="0" dataType="BS000010000100001001" dataTypeStyle="SINGLE" dbtype="varchar" defaultValue="" description="" displayName="类型编码" dynamic="false" dynamicTable="" fieldName="vcode" fieldType="varchar" fixedLength="false" forLocale="false" help="" id="b15ffa92-5523-4dcc-91c7-23922adeb12a" industryChanged="false" isActive="true" isAuthorization="true" isDefaultDimensionAttribute="false" isDefaultMeasureAttribute="false" isFeature="false" isGlobalization="false" isHide="false" isKey="false" isNullable="true" isReadOnly="false" isShare="false" isSource="true" length="50" maxValue="" minValue="" modifyIndustry="0" name="vcode" notSerialize="false" precise="" refModelName="" resid="" sequence="1" typeDisplayName="String" typeName="String" versionType="0" visibility="public"/>
+                <attribute accessStrategy="" accesspower="false" accesspowergroup="" calculation="false" classID="5920c213-1ca4-40aa-8ab6-8a8f0d1af85b" createIndustry="0" dataType="BS000010000100001001" dataTypeStyle="SINGLE" dbtype="varchar" defaultValue="" description="" displayName="类型名称" dynamic="false" dynamicTable="" fieldName="vname" fieldType="varchar" fixedLength="false" forLocale="false" help="" id="112f5c9c-4601-483d-8443-6c5764adc77d" industryChanged="false" isActive="true" isAuthorization="true" isDefaultDimensionAttribute="false" isDefaultMeasureAttribute="false" isFeature="false" isGlobalization="false" isHide="false" isKey="false" isNullable="true" isReadOnly="false" isShare="false" isSource="true" length="50" maxValue="" minValue="" modifyIndustry="0" name="vname" notSerialize="false" precise="" refModelName="" resid="" sequence="2" typeDisplayName="String" typeName="String" versionType="0" visibility="public"/>
+                <attribute accessStrategy="" accesspower="false" accesspowergroup="" calculation="false" classID="5920c213-1ca4-40aa-8ab6-8a8f0d1af85b" createIndustry="0" dataType="b97f4a23-1988-4de5-8b66-c5dbaeb9fb1a" dataTypeStyle="REF" dbtype="" defaultValue="~" description="" displayName="主数据名称" dynamic="false" dynamicTable="" fieldName="pk_meta" fieldType="varchar" fixedLength="false" forLocale="false" help="" id="8c467d12-7e89-4b23-9506-5c02925747c1" industryChanged="false" isActive="true" isAuthorization="true" isDefaultDimensionAttribute="false" isDefaultMeasureAttribute="false" isFeature="false" isGlobalization="false" isHide="false" isKey="false" isNullable="true" isReadOnly="false" isShare="false" isSource="true" length="20" maxValue="" minValue="" modifyIndustry="0" name="pk_meta" notSerialize="false" precise="" refModelName="" resid="" sequence="3" typeDisplayName="语义元数据表" typeName="metatable" versionType="0" visibility="public"/>
+                <attribute accessStrategy="" accesspower="false" accesspowergroup="" calculation="false" classID="5920c213-1ca4-40aa-8ab6-8a8f0d1af85b" createIndustry="0" dataType="BS000010000100001001" dataTypeStyle="SINGLE" dbtype="varchar" defaultValue="" description="" displayName="缺省表名" dynamic="false" dynamicTable="" fieldName="metatab" fieldType="varchar" fixedLength="false" forLocale="false" help="" id="8dae066a-cdc5-4798-986b-81d7c3af6503" industryChanged="false" isActive="true" isAuthorization="true" isDefaultDimensionAttribute="false" isDefaultMeasureAttribute="false" isFeature="false" isGlobalization="false" isHide="false" isKey="false" isNullable="true" isReadOnly="false" isShare="false" isSource="true" length="50" maxValue="" minValue="" modifyIndustry="0" name="metatab" notSerialize="false" precise="" refModelName="" resid="" sequence="4" typeDisplayName="String" typeName="String" versionType="0" visibility="public"/>
+            </attributelist>
+            <operationlist/>
+            <busiitfs/>
+            <busimaps/>
+            <canzhaolist/>
+            <accessor classFullname="nc.md.model.access.javamap.POJOStyle" displayName="POJO" name="pojo">
+                <properties/>
+            </accessor>
+        </entity>
+    </celllist>
+    <connectlist/>
+    <refdepends>
+        <dependfile entityid="b97f4a23-1988-4de5-8b66-c5dbaeb9fb1a"/>
+    </refdepends>
+    <refdependLoseIDs/>
+    <cellRemoveLog/>
+    <rulers>
+        <ruler isHorizontal="true" unit="0">
+            <guideList/>
+        </ruler>
+        <ruler isHorizontal="false" unit="0">
+            <guideList/>
+        </ruler>
+    </rulers>
+</component>

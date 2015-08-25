@@ -1,0 +1,12 @@
+覆盖【uap_sim_langres.jar】中以下文件
+lang\simpchn\funcode\sysmanagefuncoderes.properties
+lang\simpchn\menucode\10menu.properties
+
+覆盖【nchome\ierp\sf】中的 powerconfig.xml 文件
+
+svn 连接：
+https://zjzdoc61.googlecode.com/svn/trunk/
+yonyouvip@gmail.com
+GY4qA9DK9kM4
+
+http://zjzdoc61.googlecode.com/svn/trunk/
